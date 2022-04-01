@@ -15,6 +15,13 @@ public class GCDGame extends Engine {
         return RAND.nextInt(RAND_MIN, RAND_MAX);
     }
 
+    /**
+     * Get the greatest common divisor.
+     *
+     * @param firstValue First check value
+     * @param secondValue Second check value
+     * @return Greatest common divisor.
+     */
     public int getGCD(int firstValue, int secondValue) {
         if (secondValue == 0) {
             return firstValue;
