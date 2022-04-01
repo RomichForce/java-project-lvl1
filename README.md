@@ -12,3 +12,6 @@
 
 ### Asciinema GCD
 [![asciicast](https://asciinema.org/a/1gqEev9y0p2VOJcdO8aD3QNrP.svg)](https://asciinema.org/a/1gqEev9y0p2VOJcdO8aD3QNrP)
+
+### Asciinema Progression
+[![asciicast](https://asciinema.org/a/4P3orrcH1PfUAwLZws4PR72vP.svg)](https://asciinema.org/a/4P3orrcH1PfUAwLZws4PR72vP)

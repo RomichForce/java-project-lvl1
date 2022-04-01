@@ -8,7 +8,8 @@ public enum GameEnum {
     Greet(null),
     Even(new EvenGame()),
     Calc(new CalcGame()),
-    GCD(new GCDGame());
+    GCD(new GCDGame()),
+    Progression(new ProgressionGame());
 
     private final Engine selectGame;
 
