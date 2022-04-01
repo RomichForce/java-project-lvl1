@@ -7,7 +7,8 @@ import org.apache.commons.lang3.tuple.Pair;
 public enum GameEnum {
     Greet(null),
     Even(new EvenGame()),
-    Calc(new CalcGame());
+    Calc(new CalcGame()),
+    GCD(new GCDGame());
 
     private final Engine selectGame;
 

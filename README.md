@@ -9,3 +9,6 @@
 
 ### Asciinema Calc
 [![asciicast](https://asciinema.org/a/WX2b9g3OMm8eT2jqf2MlkQdx4.svg)](https://asciinema.org/a/WX2b9g3OMm8eT2jqf2MlkQdx4)
+
+### Asciinema GCD
+[![asciicast](https://asciinema.org/a/1gqEev9y0p2VOJcdO8aD3QNrP.svg)](https://asciinema.org/a/1gqEev9y0p2VOJcdO8aD3QNrP)
