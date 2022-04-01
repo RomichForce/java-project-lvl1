@@ -1,11 +1,11 @@
-package hexlet.code.game;
+package hexlet.code.games;
 
 public class RoundSetting {
     private final String question;
     private final String answer;
 
-    public RoundSetting(String currentQuestion, String currentAnswer) {
-        this.question = currentQuestion;
+    public RoundSetting(String target, String currentAnswer) {
+        this.question = String.format("Question: %s", target);
         this.answer = currentAnswer;
     }
 

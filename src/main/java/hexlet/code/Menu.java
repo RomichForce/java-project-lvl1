@@ -1,7 +1,6 @@
 package hexlet.code;
 
-import hexlet.code.game.BaseGame;
-import hexlet.code.game.GameEnum;
+import hexlet.code.games.GameEnum;
 
 import java.util.Scanner;
 
@@ -17,18 +16,13 @@ public class Menu {
     }
 
     private void startGame(int gameId) {
-        final GameEnum selectGame = GameEnum.getGame(gameId);
-        if (selectGame == null) {
-            System.out.println("This game is not in the list. Please choose another.");
-            return;
-        }
-        final BaseGame gameLauncher = selectGame.get();
-        if (gameLauncher == null) {
+        final var selectGame = GameEnum.getGame(gameId);
+        if (selectGame == null || selectGame.getRight() == null) {
             System.out.println("This game is currently unavailable. Please choose another.");
             return;
         }
-        System.out.println("You choice: " + selectGame.name());
-        selectGame.get().runGame();
+        System.out.println("You choice: " + selectGame.getLeft());
+        selectGame.getRight().runGame();
     }
 
     /**

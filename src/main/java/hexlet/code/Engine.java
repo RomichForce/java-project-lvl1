@@ -1,8 +1,11 @@
-package hexlet.code.game;
+package hexlet.code;
+
+import hexlet.code.games.RoundSetting;
 
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
-public abstract class BaseGame {
+public abstract class Engine {
     private static final String WELCOME_MESSAGE = "Welcome to the Brain Games!";
     private static final String CORRECT_MESSAGE = "Correct!";
     private static final String UNCORRECT_MESSAGE =
@@ -10,12 +13,13 @@ public abstract class BaseGame {
     private static final String SUCCESS_MESSAGE = "Congratulations, %s!\n";
     private static final int ROUND_COUNT = 3;
     private static final Scanner SCAN = new Scanner(System.in);
+    protected static final ThreadLocalRandom RAND = ThreadLocalRandom.current();
 
     private final String startMessage;
     private String playerName;
     private RoundSetting roundSetting;
 
-    public BaseGame(String message) {
+    public Engine(String message) {
         this.startMessage = message;
     }
 

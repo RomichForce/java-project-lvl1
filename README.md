@@ -4,5 +4,8 @@
 [![Java CI with Gradle](https://github.com/akhroman/java-project-lvl1/actions/workflows/gradle.yml/badge.svg)](https://github.com/akhroman/java-project-lvl1/actions/workflows/gradle.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
-### Asciinema
+### Asciinema Even
 [![asciicast](https://asciinema.org/a/pqE53svsOA5KzXScWcXSifHjO.svg)](https://asciinema.org/a/pqE53svsOA5KzXScWcXSifHjO)
+
+### Asciinema Calc
+[![asciicast](https://asciinema.org/a/WX2b9g3OMm8eT2jqf2MlkQdx4.svg)](https://asciinema.org/a/WX2b9g3OMm8eT2jqf2MlkQdx4)

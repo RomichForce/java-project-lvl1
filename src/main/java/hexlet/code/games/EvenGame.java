@@ -1,10 +1,9 @@
-package hexlet.code.game;
+package hexlet.code.games;
 
-import java.util.concurrent.ThreadLocalRandom;
+import hexlet.code.Engine;
 
-public class EvenGame extends BaseGame {
+public class EvenGame extends Engine {
     private static final String START_MESSAGE = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-    private static final ThreadLocalRandom RAND = ThreadLocalRandom.current();
     private static final int RAND_MIN = 1;
     private static final int RAND_MAX = 100;
 
@@ -24,7 +23,6 @@ public class EvenGame extends BaseGame {
     public RoundSetting setNextRound() {
         final int target = getRandomValue();
         final String rightAnswer = target % 2 == 0 ? "yes" : "no";
-        final String questQuery = String.format("Question: %d", target);
-        return new RoundSetting(questQuery, rightAnswer);
+        return new RoundSetting(String.valueOf(target), rightAnswer);
     }
 }
