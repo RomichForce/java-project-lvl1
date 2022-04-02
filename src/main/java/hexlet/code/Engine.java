@@ -29,7 +29,7 @@ public abstract class Engine {
      * @return User response
      */
     public String inputAnswer() {
-        System.out.print("Your answer:\t");
+        System.out.print("Your answer: ");
         return SCAN.next();
     }
 
@@ -38,7 +38,7 @@ public abstract class Engine {
      */
     protected void getPlayerName() {
         System.out.println(WELCOME_MESSAGE);
-        System.out.print("May I have your name?\t");
+        System.out.print("May I have your name? ");
         this.playerName = SCAN.next();
         System.out.printf("Hello, %s!\n", playerName);
     }

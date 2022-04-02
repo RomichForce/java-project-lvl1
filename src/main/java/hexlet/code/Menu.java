@@ -21,7 +21,7 @@ public class Menu {
             System.out.println("This game is not listed. Please choose another.");
             return;
         }
-        System.out.println("You choice: " + selectGame.getLeft());
+        System.out.println();
         selectGame.getRight().runGame();
     }
 
@@ -40,7 +40,7 @@ public class Menu {
         while (true) {
             Integer currentChoice;
             printMenu();
-            System.out.print("Your choice:\t");
+            System.out.print("Your choice: ");
             currentChoice = tryParseInt(SCAN.next());
             if (currentChoice == null) {
                 System.out.println("Incorrect data. Please repeat.");
