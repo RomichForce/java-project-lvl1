@@ -5,7 +5,7 @@ import hexlet.code.games.GameEnum;
 import java.util.Scanner;
 
 public class Menu {
-    private final Scanner inRead = new Scanner(System.in);
+    private static final Scanner SCAN = new Scanner(System.in);
 
     private static void printMenu() {
         System.out.println("Please enter the game number and press Enter.");
@@ -17,12 +17,20 @@ public class Menu {
 
     private void startGame(int gameId) {
         final var selectGame = GameEnum.getGame(gameId);
-        if (selectGame == null || selectGame.getRight() == null) {
-            System.out.println("This game is currently unavailable. Please choose another.");
+        if (selectGame == null) {
+            System.out.println("This game is not listed. Please choose another.");
             return;
         }
         System.out.println("You choice: " + selectGame.getLeft());
         selectGame.getRight().runGame();
+    }
+
+    private Integer tryParseInt(String input) {
+        try {
+            return Integer.parseInt(input);
+        } catch (NumberFormatException e) {
+            return null;
+        }
     }
 
     /**
@@ -30,14 +38,12 @@ public class Menu {
      */
     public void run() {
         while (true) {
-            int currentChoice;
+            Integer currentChoice;
             printMenu();
             System.out.print("Your choice:\t");
-            if (inRead.hasNextInt()) {
-                currentChoice = inRead.nextInt();
-            } else {
+            currentChoice = tryParseInt(SCAN.next());
+            if (currentChoice == null) {
                 System.out.println("Incorrect data. Please repeat.");
-                inRead.next();
                 continue;
             }
             if (currentChoice == 0) {

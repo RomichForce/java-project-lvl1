@@ -15,3 +15,6 @@
 
 ### Asciinema Progression
 [![asciicast](https://asciinema.org/a/4P3orrcH1PfUAwLZws4PR72vP.svg)](https://asciinema.org/a/4P3orrcH1PfUAwLZws4PR72vP)
+
+### Asciinema Prime
+[![asciicast](https://asciinema.org/a/754xLDVfJY0nH6SEJbHzGfBMD.svg)](https://asciinema.org/a/754xLDVfJY0nH6SEJbHzGfBMD)

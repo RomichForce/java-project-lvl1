@@ -33,7 +33,11 @@ public abstract class Engine {
         return SCAN.next();
     }
 
-    private void getPlayerName() {
+    /**
+     * Allow the user to enter their name.
+     */
+    protected void getPlayerName() {
+        System.out.println(WELCOME_MESSAGE);
         System.out.print("May I have your name?\t");
         this.playerName = SCAN.next();
         System.out.printf("Hello, %s!\n", playerName);
@@ -44,7 +48,6 @@ public abstract class Engine {
      */
     public void runGame() {
         getPlayerName();
-        System.out.println(WELCOME_MESSAGE);
         System.out.println(startMessage);
         for (var i = 0; i < ROUND_COUNT; i++) {
             this.roundSetting = setNextRound();

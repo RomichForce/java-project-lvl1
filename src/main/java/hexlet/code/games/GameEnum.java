@@ -5,11 +5,12 @@ import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
 
 public enum GameEnum {
-    Greet(null),
+    Greet(new GreetGame()),
     Even(new EvenGame()),
     Calc(new CalcGame()),
     GCD(new GCDGame()),
-    Progression(new ProgressionGame());
+    Progression(new ProgressionGame()),
+    Prime(new PrimeGame());
 
     private final Engine selectGame;
 
