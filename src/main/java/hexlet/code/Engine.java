@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public abstract class Engine {
-    private static final String WELCOME_MESSAGE = "Welcome to the Brain Games!";
+    private static final String WELCOME_MESSAGE = "\nWelcome to the Brain Games!";
     private static final String CORRECT_MESSAGE = "Correct!";
     private static final String UNCORRECT_MESSAGE =
             "'%s' is wrong answer ;(. Correct answer was '%s'.\nLet's try again, %s!\n";

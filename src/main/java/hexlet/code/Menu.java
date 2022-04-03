@@ -17,11 +17,6 @@ public class Menu {
 
     private void startGame(int gameId) {
         final var selectGame = GameEnum.getGame(gameId);
-        if (selectGame == null) {
-            System.out.println("This game is not listed. Please choose another.");
-            return;
-        }
-        System.out.println();
         selectGame.getRight().runGame();
     }
 
@@ -33,23 +28,32 @@ public class Menu {
         }
     }
 
+    private boolean isChoicePosible(Integer choice) {
+        if (choice == null) {
+            return false;
+        }
+        final var selectGame = GameEnum.getGame(choice);
+        return selectGame != null;
+    }
+
     /**
      * Print menu for run the game.
      */
     public void run() {
+        Integer currentChoice;
+        printMenu();
         while (true) {
-            Integer currentChoice;
-            printMenu();
             System.out.print("Your choice: ");
             currentChoice = tryParseInt(SCAN.next());
-            if (currentChoice == null) {
+            if (!isChoicePosible(currentChoice)) {
                 System.out.println("Incorrect data. Please repeat.");
                 continue;
             }
-            if (currentChoice == 0) {
-                return;
-            }
-            startGame(currentChoice);
+            break;
         }
+        if (currentChoice == 0) {
+            return;
+        }
+        startGame(currentChoice);
     }
 }
