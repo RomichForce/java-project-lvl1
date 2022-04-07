@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-public class PrimeGame extends Engine {
+public final class PrimeGame extends Engine {
     private static final String START_MESSAGE = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     private static final int RAND_MIN = 1;
     private static final int RAND_MAX = 100;
@@ -11,8 +11,10 @@ public class PrimeGame extends Engine {
         super(START_MESSAGE);
     }
 
-    private int getRandomValue() {
-        return RAND.nextInt(RAND_MIN, RAND_MAX);
+    public RoundSetting setNextRound() {
+        final int target = getRandomValue(RAND_MIN, RAND_MAX);
+        final String rightAnswer = isPrime(target) ? "yes" : "no";
+        return new RoundSetting(String.valueOf(target), rightAnswer);
     }
 
     private boolean isPrime(int value) {
@@ -25,15 +27,5 @@ public class PrimeGame extends Engine {
             }
         }
         return true;
-    }
-    /**
-     * Set up new data for the next round.
-     *
-     * @return Data for the next round.
-     */
-    public RoundSetting setNextRound() {
-        final int target = getRandomValue();
-        final String rightAnswer = isPrime(target) ? "yes" : "no";
-        return new RoundSetting(String.valueOf(target), rightAnswer);
     }
 }

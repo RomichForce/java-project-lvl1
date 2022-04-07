@@ -4,14 +4,10 @@ import hexlet.code.Engine;
 
 import java.util.function.IntBinaryOperator;
 
-public class CalcGame extends Engine {
+public final class CalcGame extends Engine {
     private static final String START_MESSAGE = "What is the result of the expression?";
     private static final int RAND_MIN = 1;
     private static final int RAND_MAX = 10;
-
-    public CalcGame() {
-        super(START_MESSAGE);
-    }
 
     private enum OperationEnum {
         SUM("+", (int firstValue, int secondValue) -> Math.addExact(firstValue, secondValue)),
@@ -41,18 +37,13 @@ public class CalcGame extends Engine {
         }
     }
 
-    private int getRandomValue() {
-        return RAND.nextInt(RAND_MIN, RAND_MAX);
+    public CalcGame() {
+        super(START_MESSAGE);
     }
 
-    /**
-     * Set up new data for the next round.
-     *
-     * @return Data for the next round.
-     */
     public RoundSetting setNextRound() {
-        final int firstValue = getRandomValue();
-        final int secondValue = getRandomValue();
+        final int firstValue = getRandomValue(RAND_MIN, RAND_MAX);
+        final int secondValue = getRandomValue(RAND_MIN, RAND_MAX);
         final OperationEnum randOperation = OperationEnum.getRandomOperation();
         final String questTarget = String.format("%d %s %d", firstValue, randOperation.getOperation(), secondValue);
         final String rightAnswer = String.valueOf(randOperation.getOperationResult(firstValue, secondValue));
